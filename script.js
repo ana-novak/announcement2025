@@ -10,6 +10,9 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
     mode: 'no-cors' // Prevent CORS errors
   }).then(() => {
     document.getElementById('responseMessage').style.display = 'block';
+    setTimeout(() => {
+      document.getElementById('responseMessage').style.display = 'none';
+    }, 2000)
     form.reset(); // Reset the form
   }).catch(() => {
     alert('There was an error submitting your RSVP. Please try again later.');
