@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 * {
   margin: 0;
@@ -10,18 +9,13 @@
 body {
   font-family: 'Jost', serif;
   background-color: #f8f5f0;
-  color: #4a4a4a;
+  color: #4e3178;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 a {
-  background-image: linear-gradient(
-      to right,
-      #5d3b8a,
-      #5d3b8a 50%,
-      #3e285c 50%
-  );
+  background-image: linear-gradient(to right, #5d3b8a, #5d3b8a 50%, #3e285c 50%);
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -54,15 +48,10 @@ a:hover::before {
   width: 100%;
 }
 
-.container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
 }
 
 .screen {
@@ -77,31 +66,22 @@ a:hover::before {
   background-position: center;
 }
 
-.disabled {
-  pointer-events: none;
-  cursor: default;
-  opacity: 0.6;
-}
-
-#screen1 {
+.screen-greeting {
   background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('./img/bg_1.jpg');
-  color: #4e3178;
   text-shadow: 2px 2px 10px rgb(123 114 108);
 }
 
-#screen1 .date {
+.screen-greeting .date {
   font-size: 100px;
-  font-family: "Jost", serif;
   margin: 20px 0;
   font-weight: bold;
 }
 
-#screen1 .names {
-  font-family: 'Jost', cursive;
+.screen-greeting .names {
   font-size: 80px;
 }
 
-#screen2 {
+.screen-invite {
   background-color: #fefaf8;
   padding: 50px;
   display: flex;
@@ -110,16 +90,15 @@ a:hover::before {
   justify-content: center;
 }
 
-#screen2 .content {
+.screen-invite .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   width: 100%;
   gap: 20px;
 }
 
-#screen2 .text {
+.screen-invite .text {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -127,22 +106,19 @@ a:hover::before {
   align-items: flex-start;
   text-align: left;
   font-size: 24px;
-  color: #412962;
 }
 
-#screen2 .text h2 {
+.screen-invite .text h2 {
   font-size: 46px;
   margin-bottom: 10px;
-  font-family: 'Jost', serif;
   text-transform: uppercase;
 }
 
-#screen2 .text p {
+.screen-invite .text p {
   font-size: 24px;
-  font-family: 'Roboto', sans-serif;
 }
 
-#screen2 .photos {
+.screen-invite .photos {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -151,28 +127,27 @@ a:hover::before {
   height: 400px;
 }
 
-#screen2 .photos img {
+.screen-invite .photos img {
   max-width: 350px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: absolute;
-  transition: transform 0.3s ease;
 }
 
-#screen2 .photos img:first-child {
+.screen-invite .photos img:first-child {
   top: 0;
   left: 0;
   transform: translate(-20px, 20px) rotate(-3deg);
 }
 
-#screen2 .photos img:last-child {
+.screen-invite .photos img:last-child {
   top: 0;
   right: 0;
   transform: translate(20px, -20px) rotate(3deg);
 }
 
-#screen3 {
+.screen-venue {
   font-size: 34px;
   background-color: #ffffff;
   padding: 50px;
@@ -180,21 +155,19 @@ a:hover::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
 }
 
-#screen3 .venues {
+.screen-venue .venues {
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 90px;
-  max-width: 1200px;
-  width: 100%;
 }
 
-#screen3 .venue {
+.screen-venue .venue {
   position: relative;
   display: flex;
   align-items: center;
@@ -203,32 +176,110 @@ a:hover::before {
   border-radius: 10px;
   padding: 20px;
   width: 40rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#screen3 .venue img {
+.screen-venue .venue img {
   position: absolute;
   top: 45px;
   left: -60px;
   width: 270px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#screen3 .venue .details {
-  margin-left: 250px;
+.screen-venue .venue .details {
+  margin-left: 15vw;
 }
 
-#screen3 h2 {
-  color: #5d3b8a;
-}
-
-#screen3 .venue h3 {
+.screen-venue .venue h3 {
   font-size: 24px;
-  font-family: 'Jost', serif;
   margin-bottom: 10px;
-  color: #5d3b8a;
+}
+
+.screen-venue .venue p,
+.screen-venue .venue a {
+  font-size: 18px;
+}
+
+.screen-venue .venue p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.screen-rsvp {
+  background-color: #fefaf8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 50px;
+  position: relative;
+}
+
+.screen-rsvp .left-section {
+  background-image: url('./img/black.jpg');
+  width: 100%;
+  flex: 1.2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.screen-rsvp .right-section {
+  flex: 1;
+  background: #fff;
+  padding: 20px 20px 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.screen-rsvp form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.screen-rsvp input,
+.screen-rsvp textarea,
+.screen-rsvp select,
+.screen-rsvp button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.screen-rsvp button {
+  background-color: #5d3b8a;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.screen-rsvp button:hover {
+  background-color: #452a6f;
+}
+
+.screen-rsvp .overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.screen-rsvp p {
+  margin-bottom: 15px;
 }
 
 .hidden {
@@ -241,308 +292,166 @@ a:hover::before {
   transition: opacity 1s ease-in-out;
 }
 
-#screen3 .venue p {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-#screen3 .venue a {
-  font-size: 18px;
-}
-
-#screen4 {
-  background-image: url('./img/music.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 50px;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-#screen4 h2 {
-  font-size: 36px;
-  font-family: 'Jost', serif;
-  margin-bottom: 10px;
-}
-
-#screen4 p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  font-family: 'Jost', serif;
-}
-
-#screen4 .btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-family: 'Jost', sans-serif;
-  background-color: #ffffff;
-  color: #4a4a4a;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-#screen4 .btn:hover {
-  background-color: #f0f0f0;
-}
-
-#screen5 {
-  background-color: #fefaf8;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
-  gap: 50px;
-  position: relative;
-}
-
-#screen5 .left-section {
-  flex: 1.2;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-repeat: no-repeat;
-}
-
-#screen5 .left-section img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#screen5 .right-section {
-  flex: 1;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-#screen5 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#screen5 input, #screen5 textarea, #screen5 select, #screen5 button {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#screen5 button {
-  background-color: #5d3b8a;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s;
-}
-
-#screen5 button:hover {
-  background-color: #452a6f;
-}
-
-#screen5 .overlay-image {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  width: 25%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-#screen5 p {
-  margin-bottom: 15px;
-}
-
-#screen6 {
+.screen-contacts {
   background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url("./img/footer.jpg");
   padding: 50px;
   text-align: center;
-  color: #4e3178;
 }
 
-#screen6 h2 {
-  color: #4e3178;
+.screen-contacts h2 {
   font-size: 36px;
-  font-family: 'Jost', serif;
   margin-bottom: 20px;
 }
 
-#screen6 p {
+.screen-contacts p {
   font-size: 24px;
   margin: 10px 0;
 }
 
 .footer-channel-link {
-  font-weight: bold;
+  font-weight: 550;
 }
 
-#screen6 .footer-icon {
+.screen-contacts .footer-icon {
   margin-top: 20px;
   font-size: 24px;
-  color: #4e3178;
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
-  #screen1 .date {
+  .screen-greeting .date {
     font-size: 50px;
-    font-weight: bold;
   }
 
-  #screen1 .names {
+  .screen-greeting .names {
     font-size: 40px;
   }
 
-  #screen2 .photos img {
+  .screen-invite .photos img {
     max-width: 25vw;
   }
 
-  #screen2 .photos img:first-child {
+  .screen-invite .photos img:first-child {
     top: 20vh;
     left: 20vw;
   }
 
-  #screen2 .photos img:last-child {
+  .screen-invite .photos img:last-child {
     top: 10vh;
     left: -5vw;
   }
 
-  #screen2 .text h2 {
-    font-size: 32px;
-  }
-
-  #screen3 {
-    padding: 20px;
-  }
-
-  #screen3 h2 {
+  .screen-invite .text h2,
+  .screen-venue h2 {
     font-size: 30px;
   }
 
-  #screen3 .venues {
-    flex-direction: row;
-    gap: 40px;
+  .screen-venue {
+    padding: 20px;
   }
 
-  #screen3 .venue {
-    width: 20rem;
+  .screen-venue .venues {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .screen-venue .venue {
+    width: 35vw;
     justify-content: center;
   }
 
-  #screen3 .venue .details {
+  .screen-venue .venue .details {
     margin-left: 0;
   }
 
-  #screen3 .venue img {
+  .screen-venue .venue img {
     display: none;
   }
 
-
-
-  #screen5 .left-section {
+  .screen-rsvp .left-section {
     flex: 0.75;
-    background-position: left;
+    background-position: center;
     height: 50vh;
   }
 
-  #screen5 .overlay-image {
+  .screen-rsvp .overlay-image {
     left: 33%;
-    width: 180px;
+    width: 20vw;
   }
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
-  #screen1 .date {
+  .screen-greeting .date {
     font-size: 40px;
     font-weight: bold;
   }
 
-  #screen1 .names {
+  .screen-greeting .names {
     font-size: 30px;
   }
 
-  #screen2 .photos img {
+  .screen-invite .photos img {
     max-width: 29vw;
   }
 
-  #screen2 .photos img:first-child {
+  .screen-invite .photos img:first-child {
     top: 20vh;
     left: 15vw;
   }
 
-  #screen2 .photos img:last-child {
+  .screen-invite .photos img:last-child {
     top: 20vh;
     left: -15vw;
   }
 
-  #screen2 .text h2 {
+  .screen-invite .text h2,
+  .screen-venue h2 {
     font-size: 26px;
   }
 
-  #screen2 .text p {
+  .screen-invite .text p {
     font-size: 20px;
   }
 
-  #screen3 {
+  .screen-venue {
     padding: 0;
   }
 
-  #screen3 h2 {
-    font-size: 26px;
-  }
-
-  #screen3 .venues {
+  .screen-venue .venues {
     flex-direction: row;
     justify-content: space-around;
     gap: 5px;
   }
 
-  #screen3 .venue {
+  .screen-venue .venue {
     justify-content: center;
     width: 45%;
     padding: 10px;
   }
 
-  #screen3 .venue .details {
+  .screen-venue .venue .details {
     margin-left: 0;
   }
 
-  #screen3 .venue img {
+  .screen-venue .venue img {
     display: none;
   }
 
-  #screen5 {
+  .screen-rsvp {
     padding: 20px;
     justify-content: flex-end;
   }
 
-  #screen5 .overlay-image {
+  .screen-rsvp .overlay-image {
     top: 50vh;
     left: 20%;
     width: 200px;
   }
 
-  #screen5 .left-section {
+  .screen-rsvp .left-section {
     display: none;
   }
 
-  #screen5 .right-section {
+  .screen-rsvp .right-section {
     margin-top: 10px;
     flex: 0.6;
     z-index: 9;
@@ -550,64 +459,61 @@ a:hover::before {
 }
 
 @media (max-width: 575px) {
-  #screen1 .date {
+  .screen-greeting .date {
     font-size: 40px;
     font-weight: bold;
   }
 
-  #screen1 .names {
+  .screen-greeting .names {
     font-size: 30px;
   }
 
-  #screen2 {
+  .screen-invite {
     align-items: stretch;
   }
-  #screen2 .content {
+  .screen-invite .content {
     flex-direction: column;
   }
 
-  #screen2 .photos img {
+  .screen-invite .photos img {
     max-width: 40vw;
   }
 
-  #screen2 .text h2 {
+  .screen-invite .text h2 {
     font-size: 36px;
   }
 
-  #screen3 h2 {
+  .screen-venue h2 {
     font-size: 26px;
   }
 
-  #screen3 .venues {
+  .screen-venue .venues {
     gap: 30px;
   }
 
-  #screen3 .venue {
+  .screen-venue .venue {
     width: 90%;
     justify-content: center;
   }
 
-  #screen3 .venue .details {
+  .screen-venue .venue .details {
     margin-left: 0;
   }
 
-  #screen3 .venue img {
+  .screen-venue .venue img,
+  .screen-rsvp .left-section {
     display: none;
   }
 
-  #screen5 .overlay-image {
+  .screen-rsvp .overlay-image {
     top: 27vh;
     left: 50%;
-    width: 200px;
+    width: 50vw;
   }
 
-  #screen5 .left-section {
-    display: none;
-  }
-
-  #screen5 .right-section {
-    margin-top: 200px;
+  .screen-rsvp .right-section {
+    margin-top: 20vh;
     flex: 0;
-    z-index: 9;
+    z-index: 99;
   }
 }
