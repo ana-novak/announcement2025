@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<!-- Content Screens -->
+<div id="screen1" class="screen">
+    <p class="date">08.02.2025</p>
+    <div class="names">Евгений & Анастасия</div>
+</div>
+
+<div id="screen2" class="screen">
+    <div class="content">
+        <div class="text">
+            <h2>ПРИГЛАШАЕМ</h2>
+            <p>Вас на нашу свадьбу!</p>
+        </div>
+        <div class="photos">
+            <img src="./img/one.jpeg" alt="Couple photo 1">
+            <img src="./img/two.jpeg" alt="Couple photo 2">
+        </div>
+    </div>
+</div>
+
+<div id="screen3" class="screen">
+    <h2>Место проведения</h2>
+    <div class="venues">
+        <div class="venue">
+            <img src="./img/batumi.jpeg" alt="Venue map">
+            <div class="details">
+                <h3>Свадебная церемония</h3>
+                <p><strong>Когда:</strong> 15:30, 8 февраля, 2025</p>
+                <p><strong>Где:</strong> Дворец Бракосочетания, Батуми</p>
+                <a href="https://maps.app.goo.gl/onY9TWYeRi2kumSo9" target="_blank">Посмотреть на карте</a>
+            </div>
+        </div>
+        <div class="venue">
+            <img src="./img/cat.jpeg" alt="Venue map">
+            <div class="details">
+                <h3>Ужин</h3>
+                <p><strong>Когда:</strong> --:--, 8 февраля, 2025</p>
+                <p><strong>Где:</strong> Скоро...</p>
+                <a href="#">Посмотреть на карте</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="screen4" class="screen" style="display: none">
+    <h2>ВЫБИРАЙ МУЗЫКУ</h2>
+    <p>Участвуй в составлении музыкальной программы, напиши песню, которую хочешь услышать.</p>
+    <button class="btn">MAKE SOME NOISE!</button>
+</div>
+
+
+<div id="screen5" class="screen">
+    <img src="./img/wedding.jpg" alt="Overlay Image" class="overlay-image">
+    <div class="left-section" style="background-image: url('./img/black.jpg'); width: 100%;">
+    </div>
+    <div class="right-section">
+        <p>Просим Вас подтвердить присутствие до 12 января, чтобы мы смогли организовать и спланировать все наилучшим
+            образом</p>
+        <form id="rsvpForm">
+            <input type="text" name="entry.2019365190" placeholder="Ваше имя" required>
+            <textarea name="entry.1869558446" rows="3"
+                      placeholder="Любое сообщения, которые Вы хотели бы нам оставить"></textarea>
+            <button type="submit">Я буду!</button>
+        </form>
+        <p id="responseMessage" style="display:none; color: green; margin-top: 10px;">Спасибо за Ваш ответ!</p>
+    </div>
+</div>
+
+<div id="screen6" class="screen">
+    <h2>ПО ЛЮБЫМ ВОПРОСАМ:</h2>
+    <p><strong>Настя:</strong> <a href="https://t.me/anv_21" target="_blank">t.me/anv_21</a></p>
+    <p><strong>Женя:</strong> <a href="https://t.me/green_enya" target="_blank">t.me/green_enya</a></p>
+    <p><a class="footer-channel-link" href="https://t.me/+4zM5ln2lrF0yNWJi" target="_blank">Канал, где будут все
+        обновления</a></p>
+    <div class="footer-icon">До встречи!</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
