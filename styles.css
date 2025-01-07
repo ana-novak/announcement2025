@@ -27,6 +27,8 @@ a {
   display: inline-block;
   padding: 5px 0;
   position: relative;
+  text-decoration: none;
+  -webkit-text-decoration: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
@@ -402,12 +404,12 @@ a:hover::before {
   }
 
   #screen2 .photos img:first-child {
-    top: 0;
+    top: 20vh;
     left: 20vw;
   }
 
   #screen2 .photos img:last-child {
-    top: 5vh;
+    top: 10vh;
     left: -5vw;
   }
 
@@ -425,6 +427,7 @@ a:hover::before {
 
   #screen3 .venues {
     flex-direction: row;
+    gap: 40px;
   }
 
   #screen3 .venue {
