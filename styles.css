@@ -20,7 +20,7 @@ a {
       to right,
       #5d3b8a,
       #5d3b8a 50%,
-      #000 50%
+      #3e285c 50%
   );
   background-size: 200% 100%;
   background-position: -100%;
@@ -224,13 +224,13 @@ a:hover::before {
 }
 
 #screen3 .venue p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
   color: #333;
 }
 
 #screen3 .venue a {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #screen4 {
@@ -367,7 +367,7 @@ a:hover::before {
 }
 
 #screen6 p {
-  font-size: 26px;
+  font-size: 24px;
   margin: 10px 0;
 }
 
