@@ -266,6 +266,10 @@ a:hover::before {
   background-color: #452a6f;
 }
 
+.screen-rsvp button:disabled {
+  opacity: 0.6;
+}
+
 .screen-rsvp .overlay-image {
   position: absolute;
   top: 50%;
