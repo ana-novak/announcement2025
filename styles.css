@@ -231,6 +231,16 @@ a:hover::before {
   color: #5d3b8a;
 }
 
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
 #screen3 .venue p {
   font-size: 18px;
   margin-bottom: 10px;
@@ -443,6 +453,8 @@ a:hover::before {
     display: none;
   }
 
+
+
   #screen5 .left-section {
     flex: 0.75;
     background-position: left;
@@ -466,7 +478,7 @@ a:hover::before {
   }
 
   #screen2 .photos img {
-    max-width: 30vw;
+    max-width: 29vw;
   }
 
   #screen2 .photos img:first-child {

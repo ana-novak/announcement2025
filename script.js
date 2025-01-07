@@ -9,10 +9,14 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
     body: formData,
     mode: 'no-cors' // Prevent CORS errors
   }).then(() => {
-    document.getElementById('responseMessage').style.display = 'block';
+    const message = document.getElementById("responseMessage");
+    message.classList.remove("hidden");
+    message.classList.add("visible");
+    // Через 3 секунды скрываем сообщение
     setTimeout(() => {
-      document.getElementById('responseMessage').style.display = 'none';
-    }, 2000)
+      message.classList.remove("visible");
+      message.classList.add("hidden");
+    }, 3000);
     form.reset(); // Reset the form
   }).catch(() => {
     alert('There was an error submitting your RSVP. Please try again later.');
