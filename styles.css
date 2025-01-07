@@ -75,6 +75,12 @@ a:hover::before {
   background-position: center;
 }
 
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.6;
+}
+
 #screen1 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65)), url('./img/bg_1.jpg');
   color: #4e3178;
@@ -401,12 +407,16 @@ a:hover::before {
   }
 
   #screen2 .photos img:last-child {
-    top: 0;
+    top: 5vh;
     left: -5vw;
   }
 
   #screen2 .text h2 {
     font-size: 32px;
+  }
+
+  #screen3 {
+    padding: 20px;
   }
 
   #screen3 h2 {
